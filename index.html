@@ -255,7 +255,7 @@
       <label for="fName">NAME</label><input type="text" id="fName" autocomplete="off">
       <label for="fBirth">BIRTHDATE</label><input type="date" id="fBirth">
       <label for="fAge">AGE</label><input type="number" id="fAge" min="0" max="130">
-      <label for="fNum">DRIVER NUMBER</label><input type="text" id="fNum" autocomplete="off">
+      <label for="fNum">DRIVER NUMBER</label><input type="text" id="fNum" autocomplete="off" maxlength="8">
       <label>PHOTO</label>
       <div class="photoRow">
         <div class="thumb" id="thumb"></div>
@@ -400,7 +400,7 @@
     st.name=$('fName').value||st.name;
     st.birth=$('fBirth').value;
     st.age=$('fAge').value;
-    st.num=$('fNum').value;
+    st.num=$('fNum').value.slice(0,8);
     st.photo=pendingPhoto||'';
     }
     render();
